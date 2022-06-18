@@ -1,6 +1,5 @@
 package com.example.simpleapplication.ui.start.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -43,27 +42,27 @@ class StartViewModel @Inject constructor(
         }
     }
 
-    fun test() {
-        dataRepository.getData()
-    }
-
-    init {
-        measurePerformanceInMS {
-            test()
-        }
-    }
-
-    private inline fun <T> measurePerformanceInMS(
-        function: () -> T
-    )
-            : T {
-        val startTime = System.currentTimeMillis()
-        val result: T = function.invoke()
-        val endTime = System.currentTimeMillis()
-        Log.d("TAG","PERFORMANCE IN MS: ${endTime - startTime} ms ")
-
-        return result
-    }
+//    fun test() {
+//        dataRepository.getData()
+//    }
+//
+//    init {
+//        measurePerformanceInMS {
+//            test()
+//        }
+//    }
+//
+//    private inline fun <T> measurePerformanceInMS(
+//        function: () -> T
+//    )
+//            : T {
+//        val startTime = System.currentTimeMillis()
+//        val result: T = function.invoke()
+//        val endTime = System.currentTimeMillis()
+//        Log.d("TAG","PERFORMANCE IN MS: ${endTime - startTime} ms ")
+//
+//        return result
+//    }
 }
 
 sealed class UIState() {
